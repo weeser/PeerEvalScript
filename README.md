@@ -118,13 +118,17 @@ incorrect emails.  When you first run the script, you will likely encounter seve
 was not found in the all students worksheet.
 
 If a student entered their own email address incorrectly, you will see this error message:
-`ERROR: Student name <student email address> not in students dictionary`
+```
+ERROR: Student name <student email address> not in students dictionary
+```
 
 When this occurs, the rest of that student's data will be skipped, so more errors may be uncovered once you fix this student's faulty
 email address.
 
 If a student entered a teammate's email incorrectly, you will see this error message:
-`ERROR: Teammate name <teammate email address> not in students dictionary`
+```
+ERROR: Teammate name <teammate email address> not in students dictionary
+```
 
 You will likely see several of these error message print out the first time you run the script.  If so, search for the faulty
 email addresses in the survey results spreadsheet and fix it to the correct email.  You may need to look at the names of students in a group in Canvas and search for their email address in https://search.k-state.edu (fun, I know).
@@ -132,7 +136,7 @@ email addresses in the survey results spreadsheet and fix it to the correct emai
 ### Transferring the peer evaluation results to the grades spreadsheet
 The easiest way to transfer the scores from the results spreadsheet to the grades spreadsheet is to sort both spreadsheets by
 student email so that the row numbers in each spreadsheet correspond to the same student (you will need to first lock the header
-in the results spreadsheet so that it will not be sorted in).  Then, copy and paste the columns (excluding the header) for Completed Survey?, self evaluation scores, and average peer evaluation scores from the results spreadsheet into the grades spreadsheet.
+in the results spreadsheet so that it will not be sorted in).  Then, copy and paste the columns (excluding the header) for completed survey, self evaluation scores, and average peer evaluation scores from the results spreadsheet into the grades spreadsheet.
 
 ### Updating the peer eval script
 There are four constant variables at the beginning of the script:
