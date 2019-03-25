@@ -66,10 +66,10 @@ for i in range(0, students_sheet.nrows):
 	first_name = students_sheet.cell_value(i,2)
 	students[email] = Student("{} {}".format(first_name,last_name))
 
-# Iterate through each entry in the survey sheet (skipping the header row) and add the scores to the appropriate Student object
+# Iterate through each entry in the survey sheet (skipping the header rows) and add the scores to the appropriate Student object
 for i in range(BEGINNING_ROWS_TO_IGNORE,survey_sheet.nrows):
 	email = survey_sheet.cell_value(i,BEGINNING_COLS_TO_IGNORE)
-	if email == "blank":
+	if email == "blank" or email == "":
 		continue
 	if email not in students:
 		print("ERROR: Student name {} not in students dictionary".format(email))
@@ -88,7 +88,7 @@ for i in range(BEGINNING_ROWS_TO_IGNORE,survey_sheet.nrows):
 	# Add the teammate scores
 	for k in range(1, MAX_GROUP_SIZE):
 		teammate_email = survey_sheet.cell_value(i,BEGINNING_COLS_TO_IGNORE + k)
-		if teammate_email == "blank":
+		if teammate_email == "blank" or teammate_email == "":
 			continue
 		if teammate_email not in students:
 			print("ERROR: Teammate name {} not in students dictionary".format(teammate_email))
