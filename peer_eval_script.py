@@ -68,7 +68,7 @@ for i in range(0, students_sheet.nrows):
 
 # Iterate through each entry in the survey sheet (skipping the header rows) and add the scores to the appropriate Student object
 for i in range(BEGINNING_ROWS_TO_IGNORE,survey_sheet.nrows):
-	email = survey_sheet.cell_value(i,BEGINNING_COLS_TO_IGNORE)
+	email = (survey_sheet.cell_value(i,BEGINNING_COLS_TO_IGNORE)).lower()
 	if email == "blank" or email == "":
 		continue
 	if email not in students:
@@ -87,7 +87,7 @@ for i in range(BEGINNING_ROWS_TO_IGNORE,survey_sheet.nrows):
 		
 	# Add the teammate scores
 	for k in range(1, MAX_GROUP_SIZE):
-		teammate_email = survey_sheet.cell_value(i,BEGINNING_COLS_TO_IGNORE + k)
+		teammate_email = (survey_sheet.cell_value(i,BEGINNING_COLS_TO_IGNORE + k)).lower()
 		if teammate_email == "blank" or teammate_email == "":
 			continue
 		if teammate_email not in students:
