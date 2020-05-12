@@ -5,14 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PeerReviewApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="156.237" Width="159.148">
-    <Grid>
-        <Label Content="Max Group Size:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="uxMaxGroupSize" HorizontalAlignment="Left" Height="23" Margin="106,13,0,0" TextWrapping="Wrap" Text="6" VerticalAlignment="Top" Width="29" TextAlignment="Right"/>
-        <Label Content="Question Count:" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="uxQuestionCount" HorizontalAlignment="Left" Height="23" Margin="106,41,0,0" TextWrapping="Wrap" Text="6" VerticalAlignment="Top" Width="29" TextAlignment="Right"/>
-        <Button x:Name="uxButton_LoadStudents" Content="Load Students" HorizontalAlignment="Left" Margin="23,69,0,0" VerticalAlignment="Top" Width="96" Click="uxButton_LoadStudents_Click"/>
-        <Button x:Name="uxButton_LoadSurvey" Content="Process Survey" HorizontalAlignment="Left" Margin="23,94,0,0" VerticalAlignment="Top" Width="96" Click="uxButton_LoadSurvey_Click" IsEnabled="False"/>
+        Title="Peer Eval" Height="259.57" Width="251.627">
+    <Grid Margin="0,0,0,1">
+        <Label Content="Max Group Size:" HorizontalAlignment="Left" Margin="57,41,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="uxMaxGroupSize" HorizontalAlignment="Left" Height="23" Margin="158,45,0,0" TextWrapping="Wrap" Text="6" VerticalAlignment="Top" Width="29" TextAlignment="Right"/>
+        <Label Content="Question Count:" HorizontalAlignment="Left" Margin="57,69,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="uxQuestionCount" HorizontalAlignment="Left" Height="23" Margin="158,72,0,0" TextWrapping="Wrap" Text="6" VerticalAlignment="Top" Width="29" TextAlignment="Right"/>
+        <Button x:Name="uxButton_LoadStudents" Content="Load Students" HorizontalAlignment="Left" Margin="57,16,0,0" VerticalAlignment="Top" Width="130" Click="uxButton_LoadStudents_Click"/>
+        <Button x:Name="uxButton_LoadSurvey" Content="Process Survey" HorizontalAlignment="Left" Margin="57,162,0,0" VerticalAlignment="Top" Width="130" Click="uxButton_LoadSurvey_Click" IsEnabled="False"/>
+        <Label Content="Ignore Columns:" HorizontalAlignment="Left" Margin="56,100,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="uxSurveyColSkip" HorizontalAlignment="Left" Height="23" Margin="158,101,0,0" TextWrapping="Wrap" Text="20" VerticalAlignment="Top" Width="29" TextAlignment="Right"/>
+        <Label Content="Ignore Rows:" HorizontalAlignment="Left" Margin="75,126,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="uxSurveyRowSkip" HorizontalAlignment="Left" Height="23" Margin="158,129,0,0" TextWrapping="Wrap" Text="3" VerticalAlignment="Top" Width="29" TextAlignment="Right"/>
+        <Button x:Name="uxButton_SaveResults" Content="Save Results" HorizontalAlignment="Left" Margin="57,193,0,0" VerticalAlignment="Top" Width="130" IsEnabled="False" Click="uxButton_SaveResults_Click"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="32" Margin="25,156,0,0" VerticalAlignment="Top" Width="194"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="116" Margin="25,41,0,0" VerticalAlignment="Top" Width="194"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="32" Margin="25,187,0,0" VerticalAlignment="Top" Width="194"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="32" Margin="25,10,0,0" VerticalAlignment="Top" Width="194"/>
 
     </Grid>
 </Window>
